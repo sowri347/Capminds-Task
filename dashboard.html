@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Practice Dashboard</title>
+
+  <!-- Open Sans -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+  <div class="dashboard">
+
+    <div class="dashboard-title">Practice Dashboard</div>
+
+    <div class="filter-bar">
+      <input class="filter-input" placeholder="Patient Search">
+      <input class="filter-input" placeholder="Doctor Search">
+
+      <!-- DATE RANGE (FIXED) -->
+      <input class="filter-input date-input" type="date">
+      <span>&ndash;</span>
+      <input class="filter-input date-input" type="date">
+
+      <button class="update-btn">Update</button>
+    </div>
+
+    <div class="table-card">
+      <div class="table-title">Appointment Details</div>
+
+      <div class="table-header">
+        <div>Patient</div>
+        <div>Doctor</div>
+        <div>Hospital</div>
+        <div>Specialty</div>
+        <div>Select Date</div>
+        <div>Select Time</div>
+        <div>Action</div>
+      </div>
+
+      <div id="tableBody"></div>
+    </div>
+
+  </div>
+
+</body>
+</html>

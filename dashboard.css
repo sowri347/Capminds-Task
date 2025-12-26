@@ -1,0 +1,254 @@
+/* =========================
+   DASHBOARD STYLES
+========================= */
+
+/* MAIN CARD */
+.dashboard {
+    width: 100%;
+    max-width: 1262px;
+    background: #ffffff;
+    border-radius: 8px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  
+  .dashboard::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .dashboard::-webkit-scrollbar-thumb {
+    background: #bdbdbd;
+    border-radius: 4px;
+  }
+  
+  .dashboard::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* TITLE */
+  .dashboard-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2e2e2e;
+    padding: 20px;
+    flex-shrink: 0;
+  }
+  
+  /* FILTER BAR */
+  .filter-bar {
+    min-height: 56px;
+    background: #f7f7f7;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 20px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+  }
+  
+  .filter-input {
+    height: 36px;
+    width: 200px;
+    border: 1px solid rgba(46, 46, 46, 0.25);
+    border-radius: 4px;
+    padding: 0 12px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .filter-input:focus {
+    outline: none;
+    border-color: #2c7be5;
+  }
+  
+  .date-input {
+    width: 120px;
+  }
+  
+  .filter-bar > span {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .update-btn {
+    height: 36px;
+    width: 80px;
+    background: #2c7be5;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    transition: background 0.2s;
+  }
+  
+  .update-btn:hover {
+    background: #1a5ed8;
+  }
+  
+  /* TABLE */
+  .table-card {
+    margin: 20px;
+    border: 1px solid rgba(46, 46, 46, 0.25);
+    border-radius: 4px;
+    overflow-x: auto;
+    min-width: calc(100% - 40px);
+  }
+  
+  .table-card::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .table-card::-webkit-scrollbar-thumb {
+    background: #bdbdbd;
+    border-radius: 4px;
+  }
+  
+  .table-card::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .table-title {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(46, 46, 46, 0.15);
+  }
+  
+  .table-header {
+    display: grid;
+    grid-template-columns: 160px 160px 260px 160px 140px 180px 80px;
+    background: #f1f5f8;
+    height: 48px;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 16px;
+    border-bottom: 1px solid rgba(46, 46, 46, 0.25);
+    min-width: 1140px;
+  }
+  
+  .table-row {
+    display: grid;
+    grid-template-columns: 160px 160px 260px 160px 140px 180px 80px;
+    padding: 14px 16px;
+    font-size: 12px;
+    border-bottom: 1px solid rgba(46, 46, 46, 0.15);
+    align-items: center;
+    min-width: 1140px;
+    transition: background 0.2s;
+  }
+  
+  .table-row:hover {
+    background: #f9f9f9;
+  }
+  
+  .link {
+    color: #2c7be5;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  /* ACTION ICONS */
+  .actions {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+  
+  .actions svg {
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .actions svg:hover {
+    transform: scale(1.1);
+  }
+  
+  /* EMPTY ROW */
+  .empty-row {
+    height: 48px;
+    border-bottom: 1px solid rgba(46, 46, 46, 0.25);
+  }
+  
+  /* =========================
+     MOBILE RESPONSIVE
+  ========================= */
+  @media (max-width: 768px) {
+    .dashboard {
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+  
+    .dashboard-title {
+      font-size: 20px;
+      padding: 16px;
+    }
+  
+    .filter-bar {
+      padding: 12px 16px;
+      gap: 12px;
+    }
+  
+    .filter-input {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .date-input {
+      width: calc(50% - 8px);
+    }
+  
+    .update-btn {
+      width: 100%;
+    }
+  
+    .table-card {
+      margin: 16px;
+      min-width: calc(100% - 32px);
+    }
+  
+    .table-title {
+      font-size: 14px;
+      padding: 10px 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .dashboard-title {
+      font-size: 18px;
+      padding: 12px;
+    }
+  
+    .filter-bar {
+      padding: 10px 12px;
+    }
+  
+    .filter-input,
+    .update-btn {
+      height: 32px;
+      font-size: 13px;
+    }
+  
+    .date-input {
+      width: 100%;
+    }
+  
+    .table-card {
+      margin: 12px;
+    }
+  
+    .table-header,
+    .table-row {
+      font-size: 11px;
+      padding: 12px;
+    }
+  }

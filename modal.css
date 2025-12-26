@@ -1,0 +1,263 @@
+/* ================================
+   MODAL OVERLAY
+================================ */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    z-index: 10000;
+  }
+  
+  .modal-overlay.active {
+    display: flex !important;
+  }
+  
+  /* ================================
+     MODAL CONTAINER
+  ================================ */
+  .modal {
+    background: #ffffff;
+    width: 100%;
+    max-width: 580px;
+    border-radius: 6px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  /* ================================
+     MODAL HEADER
+  ================================ */
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .modal-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    color: #2e2e2e;
+    margin: 0;
+  }
+  
+  .close-btn {
+    border: none;
+    background: none;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+    color: #2e2e2e;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+  }
+  
+  .close-btn:hover {
+    opacity: 0.7;
+  }
+  
+  /* ================================
+     FORM GRID
+  ================================ */
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* ================================
+     FIELD GROUP
+  ================================ */
+  .field-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .field-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2e2e2e;
+    font-size: 18px;
+  }
+  
+  /* ================================
+     INPUT & DROPDOWN
+  ================================ */
+  .field-input {
+    flex: 1;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    padding: 11px 12px;
+    background: #ffffff;
+    height: 42px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #2e2e2e;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  
+  .field-input:focus {
+    border-color: #1f6fff;
+  }
+  
+  /* Dropdown arrow */
+  select.field-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%232E2E2E' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+  }
+  
+  select.field-input option:first-child {
+    color: #9a9a9a;
+  }
+  
+  /* ================================
+     DATE & TIME
+  ================================ */
+  input[type="date"].field-input,
+  input[type="time"].field-input {
+    color: #9a9a9a;
+  }
+  
+  input[type="date"].field-input:focus,
+  input[type="time"].field-input:focus,
+  input[type="date"].field-input:valid,
+  input[type="time"].field-input:valid {
+    color: #2e2e2e;
+  }
+  
+  /* Hide native icon visually ONLY (no overlay, no blocking) */
+
+  /* ================================
+     REASON FIELD
+  ================================ */
+  .reason-field {
+    grid-column: span 2;
+  }
+  
+  .reason-label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #2e2e2e;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .reason-input {
+    width: 100%;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    padding: 11px 12px;
+    background: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #2e2e2e;
+    outline: none;
+    resize: vertical;
+    min-height: 56px;
+  }
+  
+  .reason-input:focus {
+    border-color: #1f6fff;
+  }
+  
+  .reason-input::placeholder {
+    color: #9a9a9a;
+  }
+  
+  /* ================================
+     FOOTER
+  ================================ */
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 2px solid #dcdcdc;
+  }
+  
+  .btn {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 38px;
+  }
+  
+  .btn-outline {
+    border: 1px solid #1f6fff;
+    background: #ffffff;
+    color: #1f6fff;
+  }
+  
+  .btn-outline:hover {
+    background: #f0f7ff;
+  }
+  
+  .btn-primary {
+    background: #1f6fff;
+    color: #ffffff;
+    border: 1px solid #1f6fff;
+  }
+  
+  .btn-primary:hover {
+    background: #1557db;
+    border-color: #1557db;
+  }
+  
+  /* ================================
+     RESPONSIVE
+  ================================ */
+  @media (max-width: 600px) {
+    .modal {
+      padding: 20px;
+      max-height: 95vh;
+    }
+  
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .reason-field {
+      grid-column: span 1;
+    }
+  
+    .modal-footer {
+      flex-direction: column-reverse;
+    }
+  
+    .btn {
+      width: 100%;
+    }
+  }
+  

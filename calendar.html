@@ -1,0 +1,51 @@
+<div class="calendar-wrapper">
+    <div class="calendar-top">
+        <div class="nav-right">
+            <button class="icon-btn" onclick="prevMonth()">&#8249;</button>
+
+            <div class="date-box">
+                <svg class="calendar-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M2.833 11.1667C2.467 11.1667 2.153 11.036 1.891 10.7747C1.63 10.5134 1.5 10.1996 1.5 9.8334V2.5C1.5 2.1334 1.631 1.8194 1.892 1.558C2.153 1.2967 2.467 1.1663 2.833 1.1667H3.5V-0.1666H4.833V1.1667H10.167V-0.1666H11.5V1.1667H12.167C12.533 1.1667 12.847 1.2974 13.109 1.5587C13.37 1.82 13.5 2.1338 13.5 2.5V9.8334C13.5 10.2 13.369 10.514 13.108 10.7754C12.847 11.0367 12.533 11.1672 12.167 11.1667H2.833ZM2.833 9.8334H12.167V5.1667H2.833V9.8334ZM2.833 3.8334H12.167V2.5H2.833V3.8334Z"
+                          fill="#2E2E2E" transform="translate(0 2)"/>
+                </svg>
+                <span id="currentDateLabel"></span>
+            </div>
+
+            <button class="icon-btn" onclick="nextMonth()">&#8250;</button>
+            <button class="today-btn" onclick="goToday()">Today</button>
+
+            <select id="monthPicker" class="month-picker" onchange="changeMonth(this.value)">
+                <option value="0">January</option>
+                <option value="1">February</option>
+                <option value="2">March</option>
+                <option value="3">April</option>
+                <option value="4">May</option>
+                <option value="5">June</option>
+                <option value="6">July</option>
+                <option value="7">August</option>
+                <option value="8">September</option>
+                <option value="9">October</option>
+                <option value="10">November</option>
+                <option value="11">December</option>
+            </select>
+
+        </div>
+    </div>
+
+    <div class="calendar-owner">James Marry</div>
+
+    <div class="calendar-scroll">
+        <div class="calendar-grid">
+          <div class="day-name">SUNDAY</div>
+          <div class="day-name">MONDAY</div>
+          <div class="day-name">TUESDAY</div>
+          <div class="day-name">WEDNESDAY</div>
+          <div class="day-name today-header">THURSDAY</div>
+          <div class="day-name">FRIDAY</div>
+          <div class="day-name">SATURDAY</div>
+      
+          <div id="calendarDays" class="days-container"></div>
+        </div>
+      </div>
+      
+</div>

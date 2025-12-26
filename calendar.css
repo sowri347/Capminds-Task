@@ -1,0 +1,252 @@
+/* =========================
+   CALENDAR STYLES
+========================= */
+
+/* =========================
+   CALENDAR CARD (NO SCROLL HERE)
+========================= */
+.calendar-wrapper {
+    width: 100%;
+    max-width: 1254px;
+    background: #ffffff;
+    border-radius: 8px;
+    margin: 0 auto;
+  
+    display: flex;
+    flex-direction: column;
+  
+    /* ❌ remove scroll from wrapper */
+    overflow: hidden;
+  
+    border: 1px solid #e6e6e6;
+  }
+  
+  /* =========================
+     TOP BAR (FIXED)
+  ========================= */
+  .calendar-top {
+    min-height: 52px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 8px 16px;
+    border-bottom: 1px solid #e6e6e6;
+    flex-shrink: 0;
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .icon-btn {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .today-btn {
+    height: 32px;
+    padding: 0 12px;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  
+  .date-box {
+    height: 32px;
+    padding: 0 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    background: #fff;
+  }
+  
+  /* =========================
+     OWNER ROW (FIXED)
+  ========================= */
+  .calendar-owner {
+    height: 36px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2C7BE5;
+    border-bottom: 1px solid #d9d9d9;
+    flex-shrink: 0;
+  }
+  
+  /* =========================
+     SCROLL CONTAINER (KEY FIX)
+  ========================= */
+  .calendar-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* horizontal scrollbar */
+  .calendar-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .calendar-scroll::-webkit-scrollbar-thumb {
+    background: #bdbdbd;
+    border-radius: 4px;
+  }
+  
+  .calendar-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* =========================
+     CALENDAR GRID
+  ========================= */
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    min-width: 900px; /* REQUIRED */
+  }
+  
+  /* =========================
+     DAY HEADER
+  ========================= */
+  .day-name {
+    height: 36px;
+    min-width: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333333;
+    border-bottom: 1px solid #d9d9d9;
+  }
+  
+  /* TODAY HEADER */
+  .day-name.today-header {
+    background: #e3f2fd;
+    color: #2C7BE5;
+    font-weight: 600;
+  }
+  
+  /* =========================
+     DAYS GRID
+  ========================= */
+  .days-container {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 110px;
+  }
+  
+  /* =========================
+     DAY CELL
+  ========================= */
+  .day {
+    border-right: 1px solid #d0d0d0;
+    border-bottom: 1px solid #d0d0d0;
+    min-height: 110px;
+    min-width: 128px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .day:nth-child(7n) {
+    border-right: none;
+  }
+  
+  .day.other-month {
+    background: #fafafa;
+    color: #999;
+  }
+  
+  /* TODAY CELL */
+  .day.today {
+    background: #e3f2fd;
+  }
+  
+  .day.today .day-number {
+    color: #2C7BE5;
+    font-weight: 600;
+  }
+  
+  /* SELECTED DAY */
+  .day.selected {
+    background: #e3f2fd;
+  }
+  
+  /* DAY NUMBER */
+  .day-number {
+    font-size: 11px;
+    color: #222;
+    margin-bottom: 8px;
+  }
+  
+  /* =========================
+     APPOINTMENT CHIP
+  ========================= */
+  .appointment {
+    background: #7bcf7b;
+    color: #1f1f1f;
+    font-size: 11px;
+    line-height: 1.3;
+    padding: 6px 8px;
+    border-radius: 4px;
+    margin-top: 4px;
+    width: calc(100% - 16px);
+    text-align: left;
+  }
+  /* Month dropdown styled exactly like Today button */
+#viewSelect {
+  height: 32px;
+  padding: 0 36px 0 12px; /* space for arrow */
+  border: 1px solid #e0e0e0;
+  background: #ffffff;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+
+  /* remove default select look */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* custom arrow */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23222' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+}
+
+/* Hover exactly like Today */
+#viewSelect:hover {
+  background-color: #f5f5f5;
+}
+
+/* Focus same as button */
+#viewSelect:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+  
